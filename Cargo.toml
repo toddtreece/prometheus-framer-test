@@ -1,0 +1,24 @@
+[package]
+name = "prometheus-framer-test"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "crates/core",
+    "crates/utils",
+]
+
+[dev-dependencies]
+core = {path="crates/core"}
+utils = {path="crates/utils"}
+grafana-plugin-sdk = {git="https://github.com/grafana/grafana-plugin-sdk-rust", branch="toddtreece/export-arrow2"}
+criterion = "0.3"
+chrono = "0.4"
+
+[[bench]]
+name = "range_vector"
+harness = false
+
+[profile.bench]
+debug = true

@@ -1,0 +1,9 @@
+[package]
+name = "utils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core = {path = "../core"}
+grafana-plugin-sdk = {git="https://github.com/grafana/grafana-plugin-sdk-rust", branch="toddtreece/export-arrow2"}
+chrono = "0.4"
